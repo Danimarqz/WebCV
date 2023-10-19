@@ -3,10 +3,6 @@
     ViewData["Title"] = "Curriculum";
 }
 <style>
-    body {
-        overflow: hidden;
-    }
-
     .background-container {
         position: fixed;
         top: 0;
@@ -23,7 +19,7 @@
     .content {
         position: relative;
         z-index: 1;
-        padding-top: 30vh;
+        text-align:center;
     }
 
     .text-center {
@@ -31,14 +27,13 @@
         backdrop-filter: blur(5px);
     }
 
-    a {
-        text-decoration: none;
-    }
-
 </style>
-<h1>Daniel Márquez Bouzo</h1>
-<h2>Web Developer</h2>
+<div class="background-container"></div>
 
+<div class="content">
+<h1>Daniel Márquez Bouzo</h1>
+<h2 class="linkedin">Web Developer</h2>
+<div id="cv">
 <button id="work">Work Experience</button>
 <div id="hiddenwork" style="display:none">
     <h3>TIC Consultant</h3>
@@ -61,8 +56,8 @@
 </div>
 <button id="contact">Contact Info</button>
 <div id="hiddencontact" style="display:none">
-<h3><a href="https://github.com/danimarqz">My Github</a></h3>
-<h3><a href="https://linkedin.com/in/danimarqz">LinkedIn</a></h3>
+            <h3><a class="git" href="https://github.com/danimarqz">GitHub <i class="fa-brands fa-github" style="color:black"></i></a></h3>
+            <h3><a class="linkedin" href="https://linkedin.com/in/danimarqz">Linked<strong><span class="white">in</span></strong></a></h3>
 <ul>
     <li>danimarquezbouzo@gmail.com</li>
     <li>+34674470387</li>
@@ -71,9 +66,9 @@
 <button id="languages">Languages</button>
 <div id="hiddenlang" style="display:none">
 <ul>
-    <li>Spanish - Native</li>
-    <li>Galician - Native</li>
-    <li>English - C1</li>
+    <li><strong>Spanish</strong> - Native</li>
+    <li><strong>Galician</strong> - Native</li>
+    <li><strong>English</strong> - C1</li>
 </ul>
 </div>
 <button id="skill">Relevant Skills</button>
@@ -96,4 +91,7 @@
         <li>Challenge lover</li>
         <li>Agile-oriented</li>
     </ul>
+</div>
+</div>
+</div>
 </div>

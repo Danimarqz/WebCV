@@ -16,13 +16,53 @@ html {
 body {
     margin-bottom: 60px;
 }
+h1{
+    margin:2vw;
+}
 .hover:hover{
     border-bottom: 1px solid white;
     transition:ease-in-out;
-    transition-duration: 300ms;
+    transition-duration: 500ms;
 }
 .hover{
     border: 1px solid transparent;
     padding:0;
     margin:8px;
+}
+button {
+    background: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    display:block;
+    margin: 2vw auto;
+}
+
+#cv > div {
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width:60vw;
+    padding:1vw;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
+.white {
+    color: white;
+    background-color: #0a66c2;
+    padding: 0 3px 0 3px;
+    margin-left:1px;
+    border-radius: 3px;
+}
+.linkedin {
+    color: #0a66c2;
+}
+.git {
+    color: #7742c7;
+}
+.git:hover {
+        color: #7742c7;
+}
+li {
+    list-style:none;
 }
