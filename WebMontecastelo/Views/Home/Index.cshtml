@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://bafybeiaggoj67rzqusmh2g375vmrr444l4pvvnr6ta6bla57i33i36l2ua.ipfs.w3s.link/bg_header.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(2px);
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        padding-top: 30vh;
+    }
+    .text-center {
+        box-shadow: 1px 1px 50px black;
+        backdrop-filter:blur(5px);
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<div class="background-container"></div>
+
+<div class="content">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to my site</h1>
+        <p>Check my <a href="https://github.com/danimarqz">curriculum vitae</a>.</p>
+    </div>
+</div>
+

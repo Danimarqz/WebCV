@@ -1,0 +1,28 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+.hover:hover{
+    border-bottom: 1px solid white;
+    transition:ease-in-out;
+    transition-duration: 300ms;
+}
+.hover{
+    border: 1px solid transparent;
+    padding:0;
+    margin:8px;
+}
