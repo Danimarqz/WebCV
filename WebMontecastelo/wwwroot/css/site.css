@@ -14,14 +14,14 @@ html {
 }
 
 img {
-    margin:1vw;
+    margin:0;
 }
 
 body {
     margin-bottom: 60px;
 }
 h1{
-    margin:2vw;
+    margin:1vw;
 }
 .hover:hover{
     border-bottom: 1px solid white;
@@ -39,11 +39,11 @@ button {
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
     display:block;
-    margin: 2vw auto;
+    margin: 1vw auto;
 }
 
 #cv > div {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
     max-width:60vw;
     padding:1vw;
     margin: auto;

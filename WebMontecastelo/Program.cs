@@ -28,5 +28,4 @@ app.MapControllerRoute(
     name: "Curriculum",
     pattern: "{controller=Curriculum}/{action=MiCurriculum}");
 
-
 app.Run();
