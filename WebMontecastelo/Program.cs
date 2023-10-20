@@ -24,4 +24,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "Curriculum",
+    pattern: "{controller=Curriculum}/{action=MiCurriculum}");
+
+
 app.Run();
