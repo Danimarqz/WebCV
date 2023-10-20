@@ -2,7 +2,7 @@
 
 namespace WebMontecastelo.Controllers
 {
-    public class CurriculumController : Controller
+    public class MiCurriculumController : Controller
     {
 
         [HttpGet]

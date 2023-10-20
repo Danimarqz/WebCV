@@ -15,6 +15,7 @@ html {
 
 img {
     margin:0;
+    max-width:28vw;
 }
 
 body {
@@ -37,9 +38,13 @@ button {
     background: black;
     color: white;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 0 0 5px 1px black;
     display:block;
     margin: 1vw auto;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 1px rgba(0,140,186, 0.5);
 }
 
 #cv > div {
