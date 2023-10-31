@@ -1,6 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using WebMontecastelo.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<MontecasteloContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionMontecastelo")));
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
