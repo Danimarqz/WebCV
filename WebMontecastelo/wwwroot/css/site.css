@@ -81,5 +81,6 @@ li {
 }
 .img-details {
     max-height:220px;
+    max-width: auto;
     margin: 1vw;
 }

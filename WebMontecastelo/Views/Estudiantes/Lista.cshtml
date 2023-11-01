@@ -1,40 +1,38 @@
-﻿@model IEnumerable<WebMontecastelo.Models.Asignaturas>
+﻿@model IEnumerable<WebMontecastelo.Models.Estudiantes>
+
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Lista</title>
+    <title>Index</title>
 </head>
 <body>
-    <h1>Asignaturas</h1>
+    <h1>Estudiantes</h1>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Id
+                @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                Nombre
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
-            <th>
-                Acciones
-            </th>
-            <th></th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.id)
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nombre)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                <a asp-action="Detalles" asp-route-id="@item.id">Detalles</a>
+                <a asp-action="Detalles" asp-route-id="@item.Id">Detalles</a>
             </td>
         </tr>
 }

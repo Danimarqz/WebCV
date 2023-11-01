@@ -1,0 +1,34 @@
+﻿@model WebMontecastelo.Models.Estudiantes
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div class="m-0">
+        <h4>Detalles del Estudiante</h4>
+        <h5 class="text-white p-2" style="background-color:#0c68f0">
+            @Html.DisplayFor(model => model.Nombre)
+        </h5>
+        <div style="display:grid">
+            <img style="grid-column: 1; justify-self:start" class="img-details" src="https://yt3.googleusercontent.com/ytc/APkrFKaeSUpnY3nq4YleCPQv4V3LuVYVGULZIPkF8JDVRQ=s176-c-k-c0x00ffffff-no-rj" />
+            <p style="grid-column: 2">
+               EDAD DEL ALUMNO: @Html.DisplayFor(model => model.Edad)
+            </p>
+            <p style="grid-column: 3">
+                CURSO AL QUE PERTENECE: @Html.DisplayFor(model => model.Curso)
+            </p>
+
+        </div>
+        <p class="text-white p-1 pb-3 mt-1 mb-0 bg-black text-center">¡Los mejores estudiantes!</p>
+    </div>
+    <a asp-action="Index" class="text-white">
+        <div class="text-center p-1 m-0" style="background-color:#0c68f0">
+            Volver a la lista
+        </div>
+    </a>
+</body>
+</html>
