@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<MontecasteloContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionMontecastelo")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionTarea3")));
 
 builder.Services.AddControllersWithViews();
 
@@ -33,5 +33,9 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "MiCurriculum",
     pattern: "{controller=MiCurriculum}/{action=MiCurriculum}");
+
+app.MapControllerRoute(
+    name: "Asignaturas",
+    pattern: "{controller=Asignaturas}/{action=Lista}");
 
 app.Run();

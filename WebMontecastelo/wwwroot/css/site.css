@@ -75,3 +75,11 @@ a {
 li {
     list-style:none;
 }
+.flow-details{
+    display: flex;
+    align-content: flex-start;
+}
+.img-details {
+    max-height:220px;
+    margin: 1vw;
+}
