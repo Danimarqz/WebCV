@@ -36,7 +36,12 @@
 <div class="content">
     <div class="text-center">
         <h1 class="display-4"><strong>Welcome to my site</strong></h1>
-        <p>Check my <a href="/MiCurriculum">curriculum vitae</a>.</p>
+        <p>Seleccione una opción:</p>
+        <ul>
+            <li><a asp-controller="Asignaturas" asp-action="Lista">Asignaturas</a></li>
+            <li><a asp-controller="Estudiantes" asp-action="Lista">Estudiantes</a></li>
+            <li><a asp-controller="Profesores" asp-action="Lista">Profesores</a></li>
+        </ul>
     </div>
 </div>
 

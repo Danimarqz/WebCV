@@ -28,11 +28,15 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
+    pattern: "{controller=Login}/{action=Logueate}");
+
+app.MapControllerRoute(
+    name: "Home",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "MiCurriculum",
-    pattern: "{controller=MiCurriculum}/{action=MiCurriculum}");
+    pattern: "{controller=Login}/{action=MiCurriculum}");
 
 app.MapControllerRoute(
     name: "Asignaturas",

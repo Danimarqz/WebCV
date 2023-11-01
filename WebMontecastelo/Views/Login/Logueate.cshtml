@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebMontecastelo.Models.Logins>
+@{
+    Layout = null;
+}
+<style>
+    body {
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .contenedor{
+        background: #f7f7f7;
+        border: 3px solid #ededed;
+    }
+    .titulo{
+        text-align:center;
+        margin:0;
+        padding: 1vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:100;
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        padding: 1vw;
+        background: white;
+        border: 1px solid #dfdfdf;
+    }
+    input{
+        padding: 5px;
+    }
+    button{
+        background-color: #0d6efd;
+        color: white;
+        max-width:max-content;
+        padding:1vw;
+        border-radius: 5px;
+        border: 0;
+    }
+    p{
+        padding: 0 10vw 0 10vw;
+    }
+</style>
+<!DOCTYPE html>
+<div class="contenedor">
+        <h1 class="titulo">Iniciar sesión</h1>
+    <form>
+        <label>Nombre de usuario</label>
+        <input type="text" placeholder="Ingresa tu usuario" id="username" />
+        <label>Contraseña</label>
+        <input type="password" placeholder="Ingresa tu contraseña" id="password" />
+        <button type="submit">Iniciar sesión</button>
+    </form>
+        <p class="register">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+</div>
