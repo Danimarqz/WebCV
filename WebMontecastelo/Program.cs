@@ -42,4 +42,8 @@ app.MapControllerRoute(
     name: "Estudiantes",
     pattern: "{controller=Estudiantes}/{action=Lista}");
 
+app.MapControllerRoute(
+    name: "Profesores",
+    pattern: "{controller=Profesores}/{action=Lista}");
+
 app.Run();
