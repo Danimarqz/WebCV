@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebMontecastelo.Models.Logins>
+﻿@model Logins;
 @{
     Layout = null;
 }
@@ -44,11 +44,11 @@
 <!DOCTYPE html>
 <div class="contenedor">
         <h1 class="titulo">Iniciar sesión</h1>
-    <form>
+    <form method="post" asp-controller="Login" asp-action="Login">
         <label>Nombre de usuario</label>
-        <input type="text" placeholder="Ingresa tu usuario" id="username" />
+        <input type="text" placeholder="Ingresa tu usuario" asp-for="Username" />
         <label>Contraseña</label>
-        <input type="password" placeholder="Ingresa tu contraseña" id="password" />
+        <input type="password" placeholder="Ingresa tu contraseña" asp-for="Password" />
         <button type="submit">Iniciar sesión</button>
     </form>
         <p class="register">¿No tienes cuenta? <a href="#">Regístrate</a></p>

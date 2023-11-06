@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Plugins;
+using WebMontecastelo.Data;
 using WebMontecastelo.Models;
 
 namespace WebMontecastelo.Controllers
@@ -18,32 +21,36 @@ namespace WebMontecastelo.Controllers
             _context = context;
         }
 
-        // GET: Login
-        public async Task<IActionResult> Logueate()
+
+        public ActionResult Logueate()
         {
-              return _context.Logins != null ? 
-                          View(await _context.Logins.ToListAsync()) :
-                          Problem("Entity set 'MontecasteloContext.Logins'  is null.");
+            return View();
         }
 
-        // GET: Login/Details/5
-        public async Task<IActionResult> Detalles(int? id)
+        [HttpPost]
+        public async Task<IActionResult> Login(Logins model)
         {
-            if (id == null || _context.Logins == null)
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                var User = from m in _context.Logins select m;
+                User = User.Where(s => s.Username.Contains(model.Username));
+                if (User.Count() != 0)
+                {
+                    if (User.First().Password == model.Password)
+                    {
+                        return RedirectToAction("UsuarioCorrecto");
+                    }
+                }
             }
-
-            var logins = await _context.Logins
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (logins == null)
-            {
-                return NotFound();
-            }
-
-            return View(logins);
+            return RedirectToAction("UsuarioIncorrecto");
         }
-
+        public ActionResult UsuarioCorrecto()
+        {
+            return View("./Views/Home/Index.cshtml");
+        }
+        public ActionResult UsuarioIncorrecto() {
+            return View("Logueate");
+        }
         public ActionResult MiCurriculum()
         {
             return View();

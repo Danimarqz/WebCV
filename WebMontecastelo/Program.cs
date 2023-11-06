@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WebMontecastelo.Models;
+using WebMontecastelo.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
